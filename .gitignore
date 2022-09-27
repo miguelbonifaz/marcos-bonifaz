@@ -4,7 +4,11 @@
 /public/vendor/statamic
 /storage/*.key
 /vendor
+/public/css
+/public/js
+/public/mix-manifest.json
 .env
+.idea
 .env.backup
 .phpunit.result.cache
 .php_cs.cache
