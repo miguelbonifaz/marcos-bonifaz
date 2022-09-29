@@ -1,4 +1,4 @@
-<div class="max-w-2xl mx-auto mb-32">
+<div class="max-w-3xl mx-auto mb-32 mt-16">
     {{ collection:articles limit="5" as="articles" }}
         {{ if no_results }}
             <h2 class="text-3xl italic tracking-tight">Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool writings!</h2>
@@ -15,6 +15,20 @@
                     <span class="text-gray-800 text-sm uppercase tracking-widest font-medium">{{ date }}</span> &mdash;
                     {{ excerpt | widont ?? content | strip_tags | safe_truncate(150, '...') }}
                 </p>
+                <a
+                    href="{{ url }}"
+                    class="flex items-center mt-4 text-base font-medium text-teal">
+                    Leer más
+                    <svg
+                        class="ml-2 w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            class="fill-current text-teal"
+                            d="M264.6 70.63l176 168c4.75 4.531 7.438 10.81 7.438 17.38s-2.688 12.84-7.438 17.38l-176 168c-9.594 9.125-24.78 8.781-33.94-.8125c-9.156-9.5-8.812-24.75 .8125-33.94l132.7-126.6H24.01c-13.25 0-24.01-10.76-24.01-24.01s10.76-23.99 24.01-23.99h340.1l-132.7-126.6C221.8 96.23 221.5 80.98 230.6 71.45C239.8 61.85 254.1 61.51 264.6 70.63z"
+                        />
+                    </svg>
+                </a>
             </div>
         {{ /articles }}
     {{ /collection:articles }}
