@@ -1,3 +1,4 @@
 .workspace .card.p-0.relative {
-    overflow: scroll !important;
+    overflow-x: scroll !important;
+    overflow: hidden;
 }
